@@ -1,0 +1,555 @@
+/***
+ * Borders around the sample layouts on the Admin side...
+ */
+.bdExampleBorder {
+	border: 1px solid #3498db;
+}
+
+/***
+ * Tabbed Navigation System - courtesy WebDesignHut
+ * https://webdesignerhut.com/create-pure-css-tabs/
+ */
+.bdTabs {
+	width: 95%;
+	float: none;
+	list-style: none;
+	padding: 0;
+	margin: 40px auto;
+	border-bottom: 4px solid #ccc;
+}
+
+.bdTabs > * {
+	font-size: initial;
+	line-height: initial;
+}
+
+.bdTabs:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.bdRadio {
+	display: none !important;
+}
+
+.bdTabs .bdLabel {
+	display: block;
+	float: left;
+	width: 25%;
+	color: #ccc;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 24px;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: inset 0 4px #ccc;
+	border-bottom: 4px solid #ccc;
+	-webkit-transition: all 0.5s; /* Safari 3.1 to 6.0 */
+	transition: all 0.5s;
+	padding: 6px 0 2px 0;
+}
+
+.bdTabs .bdLabel span {
+	display: none;
+}
+
+.bdTabs .bdLabel i:not {
+	padding: 5px;
+	margin-right: 0;
+}
+
+.bdTabs .bdLabel:hover {
+	color: #3498db;
+	box-shadow: inset 0 4px #3498db;
+	border-bottom: 4px solid #3498db;
+}
+
+.bdTab-content {
+	display: none;
+	width: 100%;
+	float: left;
+	padding: 13px;
+	box-sizing: border-box;
+	background-color:#ffffff;
+}
+
+.bdTab-content * {
+    -webkit-animation: scale 0.7s ease-in-out;
+    -moz-animation: scale 0.7s ease-in-out;
+    animation: scale 0.7s ease-in-out;
+}
+
+@keyframes scale {
+	0% {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1.01);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.bdTabs [id^="bdTab"]:checked + .bdLabel {
+	background: #FFF;
+	box-shadow: inset 0 4px #3498db;
+	border-bottom: 4px solid #3498db;
+	color: #3498db;
+}
+
+#bdTab1:checked ~ #bdTab-content1, #bdTab2:checked ~ #bdTab-content2, 
+#bdTab3:checked ~ #bdTab-content3, #bdTab4:checked ~ #bdTab-content4
+ {
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.bdTabs i {
+		padding: 5px;
+		margin-right: 10px;
+	}
+	.bdTabs .bdLabel span {
+		display: inline-block;
+	}
+}
+
+.bdCTR {
+	text-align: center;
+}
+
+/***
+ * Gotta make sure my GIF is sized correctly!
+ */
+#adminmenu .wp-menu-image img {
+	height: 23px;
+	width: auto;
+}
+
+img.bdBear {
+	height: 25px;
+	width: auto;
+}
+
+/***
+ * Need my usual FancyList here...
+ */
+.fancyList, .fancyList2, .bdfancyList {
+	display: flex;
+	flex-flow: row wrap;
+	border: 0;
+}
+
+.fancyList dt, .bdfancyList dt {
+	flex-basis: 30%;
+	font-weight: bold;
+	margin: 0 0 13px 0;
+	padding: 2px 0;
+	text-align: right;
+}
+
+.fancyList dd, .bdfancyList dd {
+	flex-basis: 60%;
+	flex-grow: 1;
+	margin: 0 0 13px 0;
+	padding: 2px 0 2px 4px;
+}
+
+.fancyList2 dt {
+	flex-basis: 55%;
+	font-weight: bold;
+	margin: 0 0 7px 0;
+	padding: 0;
+	text-align: right;
+}
+
+.fancyList2 dd {
+	flex-basis: 40%;
+	flex-grow: 1;
+	margin: 0 0 7px 0;
+	padding: 0;
+}
+
+.fancyList dt:after, .fancyList2 dt:after {
+	content: ":";
+}
+
+/***
+ * Gotta have my four column bangers, too!
+ */
+.col4 {
+	box-sizing: inherit;
+	width: 100%;
+	break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	column-rule: 0;
+	-moz-column-rule: 0;
+	-webkit-column-rule: 0;
+}
+
+.col4 div {
+	-webkit-column-break-inside: avoid; /* Chrome, Safari */
+	page-break-inside: avoid;	   /* Theoretically FF 20+ */
+	break-inside: avoid-column;	 /* IE 11 */
+	display:table;		      /* Actually FF 20+ */
+	margin: 0 auto;
+	min-width: 275px;
+	max-width: 330px;
+}
+
+@media screen and (min-width: 750px) {
+	.col4 {
+		column-gap: 3em;
+		column-count: 4;
+	}
+}
+
+@media screen and (max-width: 749px) {
+	.col4 {
+		column-gap: 2em;
+		column-count: 3;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	.col4 {
+		column-gap: 2em;
+		column-count: 2;
+	}
+}
+
+/***
+ * Social Media coloring...
+ */
+.dashicons-twitter {
+	color: #00acee;
+}
+
+.dashicons-facebook {
+	color: #3b5998;
+}
+
+.dashicons-linkedin {
+	color: #0e76a8;
+}
+
+/***
+ * Need my responsive flex boxes, too!
+ */
+.bdCT {
+	display: flex;
+	flex-wrap: wrap;	  
+	align-items: top;
+	align-content: center;
+	justify-content: center;
+}
+
+.bdCT > .bdBox2 {
+	flex-grow: 1;
+	flex: 1 1 48%;
+	margin: 3px auto 13px auto;
+	overflow: hidden;
+	padding: 2px;
+}
+
+.bdCT > .bdBox3 {
+	flex-grow: 1;
+	flex: 1 1 31%;
+	height: auto;
+	background: #fff;
+	margin: 5px auto 10px auto;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.bdCT > .bdBox4 {
+	flex-grow: 1;
+	flex: 1 1 23%;
+	height: auto;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.bdCT > .bdBox23 {
+	width: 62%;
+	height: auto;
+	min-height: 500px;
+	margin: 5px auto 10px auto;
+	float: left;
+}
+
+#bdSCcontainer {
+	background-color: #efefef;
+	width: 95%;
+	height: auto;
+	color: black;
+	padding: 3px;
+	position: -webkit-sticky; /* for safari */
+	position: sticky;
+	top: 35px;
+	right: 0;
+	float: right;
+	transition: font-size 0.2s ease-in;
+	align-self: flex-start;
+}
+
+/***
+ * Centered around the shortcode.
+ */
+#bdShortCode {
+	margin: 7px auto 0 auto;
+	width: 98%;
+	height: 75px;
+	border: 0;
+	background: #addfff;
+	overflow-wrap: break-word;
+	text-align: center;
+	border: 1px dashed #000;
+}
+
+#bdMsg {
+	font-weight: bold;
+	font-size: 1.07em;
+	color: #090;
+	text-align: center;
+	margin: 0 auto 10px auto;
+}
+
+/***
+ * Need a unique list style for ul...
+ */
+.bdList {  
+	list-style: none;
+}
+
+.bdList li:first-child {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	list-style: none;
+}
+
+.bdList li:not(:first-child):before {
+	content: "\02192 \00A0";
+}
+
+.bdCols3 {
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
+	column-count: 3;
+	column-width: 33%;
+	column-gap: 1%;
+}
+
+.bdCols4 {
+	-moz-column-count: 4;
+	-webkit-column-count: 4;
+	column-count: 4;
+	column-width: 24%;
+	column-gap: 1%;
+}
+
+.bdCols5 {
+	-moz-column-count: 5;
+	-webkit-column-count: 5;
+	column-count: 5;
+	column-width: 19%;
+	column-gap: 1%;
+}
+
+.bdCols6 {
+	-moz-column-count: 6;
+	-webkit-column-count: 6;
+	column-count: 6;
+	column-width: 15%;
+	column-gap: 1%;
+}
+
+.bdCols3 div, .bdCols4 div, .bdCols5 div, .bdCols6 div {
+	font-size: .90em;
+	-moz-column-break-inside: avoid;	/* Mozilla */
+	-webkit-column-break-inside: avoid;	/* Chrome, Safari */
+	page-break-inside: avoid;		/* Theoretically FF 20+ */
+	break-inside: avoid-column;		/* IE 11 */
+}
+
+.bdFloatLeft {
+	float: left;
+}
+
+.bdClearLeft {
+	clear: left;
+}
+
+.bdHide {
+	display: none;
+}
+
+/***
+ * Yet another responsive layout... this time, it's a 2/3 and 1/3 split.
+ */
+.bdWrapper {
+	margin: 0;
+}
+
+.bdRow {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.bdColumn {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	padding: 3px;
+}
+
+.bdDColumn {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	padding: 3px;
+}
+
+@media screen and (min-width: 800px) {
+	.bdColumn {flex: 1}
+	.bdDColumn {flex: 2}
+}
+
+.bdColumn fieldset, .bdDColumn fieldset {
+	display: block;
+	margin-inline: 2px;
+	margin-bottom: 13px;
+	padding-block: 0.35em 0.625em;
+	padding-inline: 0.75em;
+	border: 2px groove ThreeDFace;
+	min-inline-size: min-content;
+}
+
+.bdColumn fieldset > legend, .bdDColumn fieldset > legend {
+	inline-size: -moz-fit-content;
+	display: block;
+	padding-inline: 2px;
+	color: #6a5acd;
+}
+
+/***
+ * Expand and Collapse CSS...
+ */
+.bdCEContainer {
+	margin-bottom: 1.2rem 0;
+}
+
+.bdCEToggle {
+	display: none !important;
+}
+
+.bdCELabel {
+	display: block;
+	font-weight: bold;
+	font-size: 1.2rem;
+	padding: .1rem;
+	color: #fff;
+	background: #3498db;
+	cursor: pointer;
+	border-radius: 7px;
+	transition: all 0.25s ease-out;
+}
+
+.bdCELabel:hover {
+	color: #f0e68c;
+}
+
+.bdCELabel::before {
+	content: '\2BB7\00A0';
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: .7rem;
+	transform: translateY(-2px);
+	transition: transform .2s ease-out;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.bdTheToggle:checked + .bdCELabel::before {
+	transform: rotate(180deg) translateX(-3px);
+}
+
+.bdCEContent {
+	max-height: 0px;
+	overflow: hidden;
+	transition: max-height .25s ease-in-out;
+}
+
+.bdTheToggle:checked + .bdCELabel + .bdCEContent {
+	min-height: 100vh;
+	max-height: max-content;
+}
+
+.bdTheToggle:checked + .bdCELabel {
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.bdCEContent .bdCEInner {
+	background: #f5fffa;
+	border: 1px solid #3498db;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	padding: .5rem 1rem;
+	margin-bottom: 7px;
+}
+
+/***
+ * Grid system...
+ */
+.bdGridSection {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.bdGridCol {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.3%;
+}
+
+.bdGridCol:first-child {
+	margin-left: 0;
+}
+
+.bdGridHeader {
+	font-weight: bold;
+}
+
+.bdGridGroup:before, .bdGridGroup:after {
+	content:"";
+	display:table;
+}
+
+.bdGridGroup:after {
+	clear: both;
+}
+
+.bdGridGroup {
+	zoom:1
+}
+
+.bdGrid6 {
+  	width: 15.58%;
+}
+
+@media only screen and (max-width: 480px) {
+	.bdGridCol {margin: 1% 0 1% 0%;}
+	.bdGrid6 {width: 100%;}
+}

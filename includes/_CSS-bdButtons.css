@@ -1,0 +1,82 @@
+.mce-window .mce-btn {
+	border: 0;
+	border-radius: 0;
+	box-shadow: 0;
+}
+
+.mce-btn-group .mce-btn {
+	border-width: 0;
+}
+
+.mce-window-body .mce-btn {
+	border-color: transparent;
+}
+
+.mce-btn {
+	border: 0;
+	border-color: transparent;
+	text-shadow: 0;
+}
+
+/***
+ * Buttonize the <a href> element...
+ */
+[id^='bdbuttongroup'], [id^='bdbuttongroup'] div {
+	border: 0 !important;
+	box-shadow: 0 !important;
+}
+
+.mce-bdButton button, .bdButton {
+	padding: 0 10px 2px 10px;
+	border-radius: 25px;
+	border: 1px solid rgba(0,0,0,0.5);
+	margin: 1px 7px;
+	text-decoration: none;
+	line-height: auto !important;
+	display: inline-block;
+}
+
+/***
+ * Color schemes for the buttons...
+ */
+.mce-bdpGreen button, .bdpGreen {
+	background: #008000;
+	color: #fff !important;
+	font-weight: bold;
+}
+
+.mce-bdpRed button, .bdpRed {
+	background: #bd242f;
+	color: #fff !important;
+	font-weight: bold;
+}
+
+.mce-bdpBlue button, .bdpBlue {
+	background: #5dade2;
+	color: #000 !important;
+	font-weight: bold;
+}
+
+.mce-bdpPurple button, .bdpPurple {
+	background: rgba(62, 23, 60, 0.89);
+	color: #fff !important;
+	font-weight: bold;
+}
+
+.mce-bdpGold button, .bdpGold {
+	background: #a48327;
+	color: #fff !important;
+	font-weight: bold;
+}
+
+.mce-bdpBlack button, .bdpBlack {
+	background: #000;
+	color: #fff !important;
+	font-weight: bold;
+}
+
+.mce-bdpWhite button, .bdpWhite {
+	background: #fff;
+	color: #000 !important;
+	font-weight: bold;
+}

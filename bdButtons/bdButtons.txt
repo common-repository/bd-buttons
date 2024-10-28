@@ -1,0 +1,125 @@
+(function () {
+	tinymce.PluginManager.add('custom_mce_button1', function(editor, url) {
+		editor.addButton('custom_mce_button1', {
+			icon: false,
+			text: 'CDR Buttons',
+			onclick: function (e) {
+				editor.windowManager.open( {
+					title: 'Stylize your link with a button-ish type look',
+					body: [{
+						type: 'textbox',
+						name: 'linktext',
+						label: 'Link Text',
+						placeholder: 'Link Text',
+						minWidth: 100,
+						id: 'bdplinktext'
+					},
+					{
+						type: 'textbox',
+						name: 'linkurl',
+						label: 'Link URL',
+						placeholder: 'Link URL',
+						minWidth: 100,
+						id: 'bdplinkurl'
+					},
+					{
+						type: 'checkbox',
+						name: 'bdpnewwindow',
+						label: 'Open in New Window',
+						text: 'If the URL is not part of the site, check this box.',
+						id: 'bdpnewwindow'
+					},
+					{
+						type   : 'buttongroup',
+						name   : 'bdbuttongroup1',
+						id: 'bdbuttongroup1',
+						label: 'Select a button',
+						items: [
+							{
+								text: 'Green', 
+								value: 'bdpGreen', 
+								classes: 'bdputton bdpGreen',
+								onclick: function() {
+									document.getElementById('bdputtoncolor').value = 'bdpGreen';
+								}
+							},
+							{
+								text: 'Red', 
+								value: 'bdpRed', 
+								classes: 'bdputton bdpRed',
+								onclick: function() {
+									document.getElementById('bdputtoncolor').value = 'bdpRed';
+								}
+							},
+							{
+								text: 'Blue', 
+								value: 'bdpBlue', 
+								classes: 'bdputton bdpBlue',
+								onclick: function() {
+									document.getElementById('bdputtoncolor').value = 'bdpBlue';
+								}
+							},
+							{
+								text: 'White', 
+								value: 'bdpWhite', 
+								classes: 'bdputton bdpWhite',
+								onclick: function() {
+									document.getElementById('bdputtoncolor').value = 'bdpWhite';
+								}
+							},
+							{
+								text: 'Black', 
+								value: 'bdpBlack', 
+								classes: 'bdputton bdpBlack',
+								onclick: function() {
+									document.getElementById('bdputtoncolor').value = 'bdpBlack';
+								}
+							},
+							{
+								text: 'CDR Purple', 
+								value: 'bdpPurple', 
+								classes: 'bdputton bdpPurple',
+								onclick: function() {
+									document.getElementById('bdputtoncolor').value = 'bdpPurple';
+								}
+							},
+							{
+								text: 'CDR Gold', 
+								value: 'bdpGold', 
+								classes: 'bdputton bdpGold',
+								onclick: function() {
+									document.getElementById('bdputtoncolor').value = 'bdpGold';
+								}
+							}
+						]
+					},
+					{
+						type: 'textbox',
+						name: 'bdputtoncolor',
+						label: 'Selected Colors',
+						minWidth: 100,
+						id: 'bdputtoncolor',
+						value: 'bdpBlack'
+					}],
+					onsubmit: function(e) {
+						if(e.data.bdputtoncolor == null) {
+							buttoncolorbd = 'bdpBlack';
+						} else {
+							buttoncolorbd = e.data.bdputtoncolor;
+						}
+
+						send_to_editor = '<a class="bdputton ' + buttoncolorbd + '" href="' + e.data.linkurl + '"';
+
+						if(e.data.bdpnewwindow === true) {
+							send_to_editor += ' target="_blank"';
+						}
+
+						send_to_editor +='>' + e.data.linktext + '</a> ';
+
+						editor.insertContent(send_to_editor);
+					}
+				});
+			}
+		});
+	});
+})();
